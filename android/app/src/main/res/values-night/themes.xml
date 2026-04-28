@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.VirtualDeputy" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorError">@color/colorError</item>
+        <item name="android:windowBackground">@color/colorBackgroundDark</item>
+        <item name="android:statusBarColor">@color/colorSurfaceDark</item>
+        <item name="android:navigationBarColor">@color/colorBackgroundDark</item>
+        <!-- Фон диалогов Material3 — тёмный в тёмной теме -->
+        <item name="colorSurfaceContainerHigh">@color/colorSurface</item>
+        <!-- Цвет выделения текста и ручек выделения (тёмная тема) -->
+        <item name="android:textColorHighlight">@color/colorTextHighlight</item>
+        <item name="android:textSelectHandle">@drawable/text_select_handle</item>
+        <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left</item>
+        <item name="android:textSelectHandleRight">@drawable/text_select_handle_right</item>
+        <!-- Убираем серую обводку Material3 у всех карточек (тёмная тема) -->
+        <item name="materialCardViewStyle">@style/App.CardView</item>
+    </style>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Выбор языка: отображает код языка (рус/қаз/en) -->
+    <item
+        android:id="@+id/action_lang"
+        android:title="рус"
+        android:orderInCategory="1"
+        app:showAsAction="always" />
+
+    <!-- Переключение темы -->
+    <item
+        android:id="@+id/action_theme"
+        android:title="@string/menu_theme"
+        android:icon="@drawable/ic_dark_mode"
+        android:orderInCategory="2"
+        app:showAsAction="always" />
+
+    <!-- Озвучка -->
+    <item
+        android:id="@+id/action_tts"
+        android:title="@string/menu_tts"
+        android:icon="@drawable/ic_volume_on"
+        android:orderInCategory="3"
+        app:showAsAction="always" />
+
+</menu>

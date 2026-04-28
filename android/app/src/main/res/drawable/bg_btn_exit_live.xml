@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Фон кнопки выхода из живого чата — круглый с тонкой обводкой -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="#FFE4E6" />
+            <stroke android:width="1.5dp" android:color="#FECDD3" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#FFF1F2" />
+            <stroke android:width="1.5dp" android:color="#FECDD3" />
+        </shape>
+    </item>
+</selector>

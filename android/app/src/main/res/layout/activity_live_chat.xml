@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- ═══════════════════════════════════════════════════
+         Тулбар: title = "AI assistant", subtitle = "Live conversation"
+         ═══════════════════════════════════════════════════ -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingTop="20dp"
+        android:background="#FFFFFF"
+        android:elevation="0dp" />
+
+    <!-- Разделитель под тулбаром -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E2E8F0" />
+
+    <!-- ═══════════════════════════════════════════════════
+         Секция аватара.
+         Высота 295dp: кольцо(254) + отступ(12) + точки(14) + буфер(15)
+         Точки всегда видны, не обрезаются чатом снизу.
+         ═══════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:id="@+id/heroSection"
+        android:layout_width="match_parent"
+        android:layout_height="295dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_live_hero">
+
+        <!-- Кольцо-ореол -->
+        <FrameLayout
+            android:layout_width="254dp"
+            android:layout_height="254dp"
+            android:background="@drawable/bg_avatar_ring">
+
+            <!-- Круглый контейнер — обрезает видео до круга -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="115dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#EEF6FF">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#EEF6FF">
+
+                    <!-- Анимация (когда ИИ говорит).
+                         TextureView — часть обычной View-иерархии: поддерживает alpha,
+                         transform-матрицу и centerCrop без артефактов SurfaceView. -->
+                    <TextureView
+                        android:id="@+id/videoAi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <!-- Заглушка поверх VideoView — скрывает SurfaceView пока ИИ молчит.
+                         SurfaceView рендерится в аппаратный слой и игнорирует View.alpha,
+                         поэтому скрываем непрозрачным View того же цвета что фон. -->
+                    <View
+                        android:id="@+id/videoCover"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#EEF6FF" />
+
+                    <!-- Стоп-кадр (когда ИИ молчит) -->
+                    <ImageView
+                        android:id="@+id/imgAiIdle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:alpha="0" />
+                    <!-- alpha=0 по умолчанию; Java ставит 1 после загрузки bitmap -->
+
+                    <!-- Лёгкий градиент снизу -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/bg_avatar_bottom_fade" />
+
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+
+        <!-- Typing dots (три точки пока ИИ думает).
+             Располагаются ВНУТРИ heroSection с marginTop=12 от кольца.
+             Секция 295dp = 254 + 12 + 14 + 15 запаса → точки не скрываются. -->
+        <LinearLayout
+            android:id="@+id/typingIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <View android:id="@+id/dot1"
+                android:layout_width="8dp" android:layout_height="8dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/bg_typing_dot" />
+            <View android:id="@+id/dot2"
+                android:layout_width="8dp" android:layout_height="8dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/bg_typing_dot" />
+            <View android:id="@+id/dot3"
+                android:layout_width="8dp" android:layout_height="8dp"
+                android:background="@drawable/bg_typing_dot" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Разделитель -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E2E8F0" />
+
+    <!-- ═══════════════════════════════════════════════════
+         Чат — сообщения.
+         focusable=true позволяет принять фокус при тапе по пустому
+         месту → textIsSelectable TextView теряет фокус → сбрасывается выделение.
+         ═══════════════════════════════════════════════════ -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:overScrollMode="never"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <!-- ═══════════════════════════════════════════════════
+         Поле ввода — mic | text | send | exit
+         ═══════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="12dp"
+        android:elevation="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_input_container"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp">
+
+            <!-- Микрофон -->
+            <ImageButton
+                android:id="@+id/btnMic"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_mic"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/btn_mic"
+                android:scaleType="center" />
+
+            <!-- Поле ввода текста -->
+            <EditText
+                android:id="@+id/etInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/hint_message"
+                android:maxLines="4"
+                android:inputType="textMultiLine|textCapSentences"
+                android:background="@android:color/transparent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textSize="15sp"
+                android:textColor="#0F172A"
+                android:textColorHint="#94A3B8" />
+
+            <!-- Отправить -->
+            <ImageButton
+                android:id="@+id/btnSend"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_send"
+                android:background="@drawable/bg_btn_send"
+                android:contentDescription="@string/btn_send"
+                android:scaleType="center"
+                android:layout_marginEnd="6dp" />
+
+            <!-- Выход -->
+            <ImageButton
+                android:id="@+id/btnExit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_close"
+                android:background="@drawable/bg_btn_exit_live"
+                android:contentDescription="@string/back"
+                android:scaleType="center"
+                android:layout_marginEnd="4dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

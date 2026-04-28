@@ -1,0 +1,54 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Коллекция users: пользователь читает/пишет только свои данные
+    match /users/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+
+      // Подколлекция complaints — пользователь управляет только своими заявками
+      match /complaints/{complaintId} {
+        allow read, write: if request.auth != null && request.auth.uid == uid;
+      }
+
+      // Подколлекция history — пользователь управляет только своей историей
+      match /history/{histId} {
+        allow read, write: if request.auth != null && request.auth.uid == uid;
+      }
+    }
+
+    // Коллекция locations — аутентифицированные пользователи пишут, читают — свои
+    match /locations/{locId} {
+      allow create: if request.auth != null;
+      allow read:   if request.auth != null
+                    && resource.data.uid == request.auth.uid;
+      allow delete: if request.auth != null
+                    && resource.data.uid == request.auth.uid;
+    }
+
+    // Коллекция deputies — только чтение для аутентифицированных пользователей
+    // (Android-приложение читает её при создании заявки для определения ответственного депутата)
+    match /deputies/{uid} {
+      allow read: if request.auth != null;
+      allow write: if false; // только через Firebase Admin SDK (сервер)
+    }
+
+    // Счётчик заявок — чтение и запись для авторизованных
+    match /global/stats {
+      allow read, write: if request.auth != null;
+    }
+
+    // Глобальная коллекция всех заявок — Android пишет, читает только сервер
+    match /allComplaints/{docId} {
+      allow create: if request.auth != null;
+      allow read:   if request.auth != null;
+      allow update, delete: if false;
+    }
+
+    // Глобальные запросы для аналитики
+    match /global_queries/{docId} {
+      allow read, write: if request.auth != null;
+    }
+
+  }
+}

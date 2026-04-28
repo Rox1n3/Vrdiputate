@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+
+    <!-- Синий фон — КРУГ (вместо квадрата) -->
+    <path
+        android:fillColor="#14B8A6"
+        android:pathData="M16,0 A16,16,0,0,1,16,32 A16,16,0,0,1,16,0 Z" />
+
+    <!-- Белый прямоугольник — тело робота (без изменений) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M8,8L24,8L24,24L8,24Z" />
+
+    <!-- Левый глаз (синий) -->
+    <path
+        android:fillColor="#14B8A6"
+        android:pathData="M11,13L14,13L14,16L11,16Z" />
+
+    <!-- Правый глаз (синий) -->
+    <path
+        android:fillColor="#14B8A6"
+        android:pathData="M18,13L21,13L21,16L18,16Z" />
+
+    <!-- Рот (синий прямоугольник) -->
+    <path
+        android:fillColor="#14B8A6"
+        android:pathData="M11,19L21,19L21,21L11,21Z" />
+
+</vector>

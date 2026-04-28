@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Основная палитра — бирюзовый -->
+    <color name="colorPrimary">#14B8A6</color>
+    <color name="colorPrimaryDark">#0D9488</color>
+    <color name="colorSecondary">#2DD4BF</color>
+
+    <!-- Светлая тема -->
+    <color name="colorBackground">#F8FAFC</color>
+    <color name="colorBackgroundDark">#0F172A</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorSurfaceDark">#1E293B</color>
+    <color name="colorOnBackground">#0F172A</color>
+    <color name="colorTextSecondary">#64748B</color>
+
+    <!-- Фон поля ввода (светлая тема) -->
+    <color name="colorInputBg">#F1F5F9</color>
+
+    <!-- Обводка пузырька бота -->
+    <color name="colorBotBubbleBorder">#E2E8F0</color>
+
+    <!-- Выделение текста (светлая тема) -->
+    <color name="colorTextHighlight">#55404040</color>
+    <color name="colorSelectionHandle">#505050</color>
+
+    <!-- Ошибка -->
+    <color name="colorError">#EF4444</color>
+</resources>

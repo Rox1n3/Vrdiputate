@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Тёмная тема — переопределяет значения из values/colors.xml -->
+    <color name="colorBackground">#0F172A</color>
+    <color name="colorSurface">#1E293B</color>
+    <color name="colorOnBackground">#F1F5F9</color>
+    <color name="colorTextSecondary">#94A3B8</color>
+    <color name="colorInputBg">#273548</color>
+    <!-- Обводка пузырька бота — скрыта в тёмной теме -->
+    <color name="colorBotBubbleBorder">#1E293B</color>
+    <!-- Выделение текста (тёмная тема) -->
+    <color name="colorTextHighlight">#55C8C8C8</color>
+    <color name="colorSelectionHandle">#C8C8C8</color>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Кольцо-ореол вокруг аватара ИИ -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Внешнее мягкое свечение -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#2814B8A6" />
+        </shape>
+    </item>
+    <!-- Среднее кольцо -->
+    <item
+        android:bottom="6dp"
+        android:left="6dp"
+        android:right="6dp"
+        android:top="6dp">
+        <shape android:shape="oval">
+            <solid android:color="#4014B8A6" />
+        </shape>
+    </item>
+    <!-- Чёткое голубое кольцо -->
+    <item
+        android:bottom="12dp"
+        android:left="12dp"
+        android:right="12dp"
+        android:top="12dp">
+        <shape android:shape="oval">
+            <stroke
+                android:width="3dp"
+                android:color="#14B8A6" />
+            <solid android:color="#00000000" />
+        </shape>
+    </item>
+</layer-list>

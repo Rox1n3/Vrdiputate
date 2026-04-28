@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "915423450346",
+    "project_id": "ai-assistant-b2adf",
+    "storage_bucket": "ai-assistant-b2adf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915423450346:android:aaea3a09d1cc331757f393",
+        "android_client_info": {
+          "package_name": "kz.kitdev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYZtH1xzd5ebcvhu4w6trI0RzZcl4kjIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

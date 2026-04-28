@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AI assistant</string>
+
+    <!-- Auth -->
+    <string name="login_subtitle">AI assistant for Kazakhstan law</string>
+    <string name="register_title">Sign Up</string>
+    <string name="register_subtitle">Create an account to save history</string>
+
+    <!-- Hints -->
+    <string name="hint_name">Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_current_password">Current password</string>
+    <string name="hint_new_password">New password</string>
+
+    <!-- Buttons -->
+    <string name="btn_login">Sign In</string>
+    <string name="btn_register">Sign Up</string>
+    <string name="btn_save_password">Save Password</string>
+    <string name="btn_logout">Log Out</string>
+
+    <!-- Links -->
+    <string name="forgot_password">Forgot password?</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="register_link">Sign Up</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="login_link">Sign In</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Profile</string>
+    <string name="label_name">Name</string>
+    <string name="label_email">Email</string>
+    <string name="change_password_title">Change Password</string>
+
+    <!-- Chat -->
+    <string name="hint_message">Enter your question…</string>
+    <string name="hint_recording">🎤 Recording…</string>
+    <string name="hint_transcribing">⏳ Transcribing…</string>
+    <string name="btn_mic">Microphone</string>
+    <string name="btn_send">Send</string>
+    <string name="btn_live_chat">Live AI conversation</string>
+    <string name="tts_on">Voice on</string>
+    <string name="tts_off">Voice off</string>
+    <string name="live_status_idle">AI assistant</string>
+    <string name="live_status_listening">Listening…</string>
+    <string name="live_status_speaking">Responding…</string>
+    <string name="chat_welcome">Hello! I am the AI assistant of the Pavlodar Region Administration. Describe your problem or ask a question — I will help you and tell you where to apply.</string>
+
+    <!-- Menu -->
+    <string name="menu_theme">Theme</string>
+    <string name="menu_tts">Voice</string>
+    <string name="menu_history">History</string>
+    <string name="menu_chat">Chat</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_logout">Log Out</string>
+
+    <!-- History -->
+    <string name="history_saved">Saved to history</string>
+    <string name="history_answer_title">AI Response</string>
+    <string name="history_title">Request History</string>
+    <string name="history_search_hint">Search questions…</string>
+    <string name="history_empty">History is empty</string>
+    <string name="history_delete_title">Delete record</string>
+    <string name="history_delete_message">Delete this record from history?</string>
+    <string name="history_delete_confirm">Delete</string>
+    <string name="back">Back</string>
+
+    <!-- Success -->
+    <string name="password_changed">Password changed successfully</string>
+
+    <!-- Errors -->
+    <string name="error_email_required">Enter email</string>
+    <string name="error_password_required">Enter password</string>
+    <string name="error_name_required">Enter your name</string>
+    <string name="error_password_short">At least 6 characters required</string>
+    <string name="error_invalid_credentials">Invalid email or password</string>
+    <string name="error_register_failed">Registration failed</string>
+    <string name="error_password_change_failed">Failed to change password</string>
+    <string name="error_network">No server connection</string>
+    <string name="error_chat_empty">Enter a question</string>
+    <string name="error_mic_denied">Microphone permission denied</string>
+    <string name="error_speech_unavailable">Speech recognition unavailable</string>
+    <string name="error_kk_lang_missing">Install Kazakh language pack in the Google app</string>
+    <string name="error_chat_failed">Failed to get response</string>
+
+    <!-- Analytics screen -->
+    <string name="analytics_btn">Request Analytics</string>
+    <string name="analytics_title">Request Analytics</string>
+    <string name="analytics_search_hint">Search complaints…</string>
+    <string name="analytics_back_to_history">Back to Request History</string>
+    <string name="analytics_empty">No complaints yet</string>
+    <string name="analytics_delete_message">Remove this complaint from analytics?</string>
+    <string name="analytics_label_fio">Name: </string>
+    <string name="analytics_label_problem">Problem: </string>
+    <string name="analytics_label_phone">  •  Phone: </string>
+    <string name="analytics_label_address">Address: </string>
+    <string name="analytics_dialog_you">👤 You:\n</string>
+    <string name="analytics_dialog_ai">🤖 AI:\n</string>
+    <string name="analytics_no_messages">Conversation not saved</string>
+
+    <!-- Push notifications -->
+    <string name="notification_status_title">Complaint status updated</string>
+    <string name="notification_status_body">Tap to open your complaint</string>
+    <string name="notification_channel_name">Complaint statuses</string>
+    <string name="notification_channel_desc">Notifications about your complaint status changes</string>
+
+    <!-- Complaint statuses -->
+    <string name="status_processing">processing</string>
+    <string name="status_in_work">in progress</string>
+    <string name="status_done">done</string>
+    <string name="status_rejected">rejected</string>
+</resources>

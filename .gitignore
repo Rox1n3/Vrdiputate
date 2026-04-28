@@ -1,0 +1,8 @@
+node_modules
+.next
+.env
+pnpm-lock.yaml
+yarn.lock
+npm-debug.log*
+prisma/*.db
+prisma/*.db-journal

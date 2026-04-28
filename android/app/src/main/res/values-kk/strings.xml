@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AI assistant</string>
+
+    <!-- Auth -->
+    <string name="login_subtitle">ҚР заңнамасы бойынша AI-ассистент</string>
+    <string name="register_title">Тіркелу</string>
+    <string name="register_subtitle">Тарихты сақтау үшін аккаунт жасаңыз</string>
+
+    <!-- Hints -->
+    <string name="hint_name">Аты</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Құпия сөз</string>
+    <string name="hint_current_password">Ағымдағы құпия сөз</string>
+    <string name="hint_new_password">Жаңа құпия сөз</string>
+
+    <!-- Buttons -->
+    <string name="btn_login">Кіру</string>
+    <string name="btn_register">Тіркелу</string>
+    <string name="btn_save_password">Сақтау</string>
+    <string name="btn_logout">Шығу</string>
+
+    <!-- Links -->
+    <string name="forgot_password">Құпия сөзді ұмыттыңыз ба?</string>
+    <string name="no_account">Аккаунт жоқ па?</string>
+    <string name="register_link">Тіркелу</string>
+    <string name="have_account">Аккаунт бар ма?</string>
+    <string name="login_link">Кіру</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Профиль</string>
+    <string name="label_name">Аты</string>
+    <string name="label_email">Email</string>
+    <string name="change_password_title">Құпия сөзді өзгерту</string>
+
+    <!-- Chat -->
+    <string name="hint_message">Сұрақты енгізіңіз…</string>
+    <string name="hint_recording">🎤 Жазу жүріп жатыр…</string>
+    <string name="hint_transcribing">⏳ Тану…</string>
+    <string name="btn_mic">Микрофон</string>
+    <string name="btn_send">Жіберу</string>
+    <string name="btn_live_chat">ЖИ-мен тікелей сөйлесу</string>
+    <string name="tts_on">Дыбыс қосылды</string>
+    <string name="tts_off">Дыбыс өшірілді</string>
+    <string name="live_status_idle">AI assistant</string>
+    <string name="live_status_listening">Тыңдайды…</string>
+    <string name="live_status_speaking">Жауап береді…</string>
+    <string name="chat_welcome">Сәлеметсіз бе! Мен Павлодар облысы әкімдігінің ЖИ-көмекшісімін. Мәселеңізді сипаттаңыз немесе сұрақ қойыңыз — мен көмектесіп, қайда хабарласу керектігін айтамын.</string>
+
+    <!-- Menu -->
+    <string name="menu_theme">Тақырып</string>
+    <string name="menu_tts">Дыбыс</string>
+    <string name="menu_history">Тарих</string>
+    <string name="menu_chat">Чат</string>
+    <string name="menu_profile">Профиль</string>
+    <string name="menu_logout">Шығу</string>
+
+    <!-- History -->
+    <string name="history_saved">Тарихқа сақталды</string>
+    <string name="history_answer_title">ЖИ жауабы</string>
+    <string name="history_title">Сұраулар тарихы</string>
+    <string name="history_search_hint">Іздеу…</string>
+    <string name="history_empty">Тарих бос</string>
+    <string name="history_delete_title">Жазбаны жою</string>
+    <string name="history_delete_message">Бұл жазбаны тарихтан жою керек пе?</string>
+    <string name="history_delete_confirm">Жою</string>
+    <string name="back">Артқа</string>
+
+    <!-- Success -->
+    <string name="password_changed">Құпия сөз өзгертілді</string>
+
+    <!-- Errors -->
+    <string name="error_email_required">Email енгізіңіз</string>
+    <string name="error_password_required">Құпия сөзді енгізіңіз</string>
+    <string name="error_name_required">Атыңызды енгізіңіз</string>
+    <string name="error_password_short">Кемінде 6 таңба болуы керек</string>
+    <string name="error_invalid_credentials">Email немесе құпия сөз қате</string>
+    <string name="error_register_failed">Тіркелу қатесі</string>
+    <string name="error_password_change_failed">Құпия сөзді өзгерту мүмкін болмады</string>
+    <string name="error_network">Сервермен байланыс жоқ</string>
+    <string name="error_chat_empty">Сұрақты енгізіңіз</string>
+    <string name="error_mic_denied">Микрофонға рұқсат жоқ</string>
+    <string name="error_speech_unavailable">Сөйлеуді тану қолжетімді емес</string>
+    <string name="error_kk_lang_missing">Google қолданбасында қазақ тілі бумасын орнатыңыз</string>
+    <string name="error_chat_failed">Жауап алу қатесі</string>
+
+    <!-- Analytics screen -->
+    <string name="analytics_btn">Өтінімдер аналитикасы</string>
+    <string name="analytics_title">Өтінімдер аналитикасы</string>
+    <string name="analytics_search_hint">Өтінімдерден іздеу…</string>
+    <string name="analytics_back_to_history">Сұраулар тарихына оралу</string>
+    <string name="analytics_empty">Өтінімдер әлі жоқ</string>
+    <string name="analytics_delete_message">Бұл өтінімді аналитикадан жою керек пе?</string>
+    <string name="analytics_label_fio">АӘТ: </string>
+    <string name="analytics_label_problem">Мәселе: </string>
+    <string name="analytics_label_phone">  •  Тел: </string>
+    <string name="analytics_label_address">Мекенжай: </string>
+    <string name="analytics_dialog_you">👤 Сіз:\n</string>
+    <string name="analytics_dialog_ai">🤖 ЖИ:\n</string>
+    <string name="analytics_no_messages">Хат алмасу сақталмаған</string>
+
+    <!-- Push-хабарландырулар -->
+    <string name="notification_status_title">Өтінімнің мәртебесі өзгерді</string>
+    <string name="notification_status_body">Өтінімді ашу үшін басыңыз</string>
+    <string name="notification_channel_name">Өтінімдердің мәртебелері</string>
+    <string name="notification_channel_desc">Өтінімдеріңіздің мәртебесі өзгерген кезде хабарландыру</string>
+
+    <!-- Өтінімдердің күйлері -->
+    <string name="status_processing">қарастырылуда</string>
+    <string name="status_in_work">орындалуда</string>
+    <string name="status_done">орындалды</string>
+    <string name="status_rejected">қабылданбады</string>
+</resources>

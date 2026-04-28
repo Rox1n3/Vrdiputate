@@ -1,0 +1,140 @@
+<resources>
+    <string name="app_name">Виртуальный консультант маслихата</string>
+
+    <!-- Auth screens -->
+    <string name="login_subtitle">AI-ассистент по законодательству РК</string>
+    <string name="register_title">Регистрация</string>
+    <string name="register_subtitle">Создайте аккаунт для сохранения истории</string>
+
+    <!-- Hints -->
+    <string name="hint_name">Имя</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Пароль</string>
+    <string name="hint_current_password">Текущий пароль</string>
+    <string name="hint_new_password">Новый пароль</string>
+    <string name="hint_reset_token">Код из письма</string>
+
+    <!-- Buttons -->
+    <string name="btn_login">Войти</string>
+    <string name="btn_register">Зарегистрироваться</string>
+    <string name="btn_send_reset_email">Отправить инструкции</string>
+    <string name="btn_confirm_reset">Сохранить новый пароль</string>
+    <string name="btn_save_password">Сохранить пароль</string>
+    <string name="btn_logout">Выйти из аккаунта</string>
+
+    <!-- Links -->
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="no_account">Нет аккаунта?</string>
+    <string name="register_link">Зарегистрироваться</string>
+    <string name="have_account">Уже есть аккаунт?</string>
+    <string name="login_link">Войти</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Профиль</string>
+    <string name="label_name">Имя</string>
+    <string name="label_email">Email</string>
+    <string name="change_password_title">Сменить пароль</string>
+
+    <!-- Reset password -->
+    <string name="reset_password_title">Восстановление пароля</string>
+    <string name="reset_step1_hint">Введите email, на который придут инструкции по восстановлению</string>
+    <string name="reset_step2_hint">Введите код из письма и новый пароль</string>
+
+    <!-- Home -->
+    <string name="welcome_user">Добро пожаловать, %1$s!</string>
+    <string name="chat_coming_soon">Чат появится в следующей части</string>
+
+    <!-- Chat -->
+    <string name="hint_message">Введите вопрос…</string>
+    <string name="hint_photo_caption">Добавьте подпись к фото (необязательно)…</string>
+    <string name="photo_context_no_caption">[Пользователь прикрепил фото к обращению]</string>
+    <string name="photo_context_with_caption">[К сообщению прикреплено фото]</string>
+    <string name="hint_recording">🎤 Идёт запись…</string>
+    <string name="hint_transcribing">⏳ Распознавание…</string>
+    <string name="btn_mic">Микрофон</string>
+    <string name="btn_send">Отправить</string>
+    <string name="btn_live_chat">Живой чат с ИИ</string>
+    <string name="live_status_idle">Виртуальный консультант маслихата</string>
+    <string name="btn_camera">Прикрепить фото</string>
+    <string name="photo_added">📷 Фото добавлено в ваше обращение.\n\nЕсли вы ещё не указали ФИО, телефон и адрес — продолжите, пожалуйста, диалог, и я помогу оформить заявку.</string>
+    <string name="analyzing_image">Анализирую изображение…</string>
+    <string name="photo_picker_title">Добавить фото</string>
+    <string name="photo_camera">Сделать фото</string>
+    <string name="photo_gallery">Выбрать из галереи</string>
+    <string name="bitriks_info_title">О приложении</string>
+    <string name="bitriks_info_msg">Дата добавления\n\nДобавлено: 24.04.26</string>
+    <string name="live_status_listening">Слушает…</string>
+    <string name="live_status_speaking">Отвечает…</string>
+    <string name="tts_on">Озвучка включена</string>
+    <string name="tts_off">Озвучка выключена</string>
+    <string name="chat_welcome">Здравствуйте! Я ИИ-помощник акимата Павлодарской области. Опишите вашу проблему или задайте вопрос — я помогу разобраться и подскажу, куда обратиться.</string>
+
+    <!-- Menu -->
+    <string name="menu_theme">Тема</string>
+    <string name="menu_tts">Озвучка</string>
+    <string name="menu_history">История</string>
+    <string name="menu_chat">Чат</string>
+    <string name="menu_profile">Профиль</string>
+    <string name="menu_logout">Выйти</string>
+
+    <!-- History screen -->
+    <string name="history_saved">Сохранено в историю</string>
+    <string name="history_answer_title">Ответ ИИ</string>
+    <string name="history_title">История запросов</string>
+    <string name="history_search_hint">Поиск по вопросам и ответам…</string>
+    <string name="history_empty">История пуста</string>
+    <string name="history_delete_title">Удалить запись</string>
+    <string name="history_delete_message">Удалить этот вопрос из истории?</string>
+    <string name="history_delete_confirm">Удалить</string>
+    <string name="back">Назад</string>
+
+    <!-- Success messages -->
+    <string name="reset_email_sent">Инструкции отправлены на ваш email</string>
+    <string name="reset_success">Пароль успешно изменён</string>
+    <string name="password_changed">Пароль успешно обновлён</string>
+
+    <!-- Error messages -->
+    <string name="error_email_required">Введите email</string>
+    <string name="error_password_required">Введите пароль</string>
+    <string name="error_name_required">Введите имя</string>
+    <string name="error_password_short">Пароль должен быть не менее 6 символов</string>
+    <string name="error_token_required">Введите код из письма</string>
+    <string name="error_invalid_credentials">Неверный email или пароль</string>
+    <string name="error_register_failed">Ошибка регистрации. Возможно, email уже используется</string>
+    <string name="error_reset_failed">Не удалось отправить письмо. Проверьте email</string>
+    <string name="error_reset_confirm_failed">Неверный или истёкший код</string>
+    <string name="error_password_change_failed">Не удалось сменить пароль. Проверьте текущий пароль</string>
+    <string name="error_network">Нет подключения к серверу</string>
+    <string name="error_chat_empty">Введите вопрос</string>
+    <string name="error_mic_denied">Нет разрешения на использование микрофона</string>
+    <string name="error_speech_unavailable">Распознавание речи недоступно</string>
+    <string name="error_kk_lang_missing">Установите казахский языковой пакет в приложении Google</string>
+    <string name="error_chat_failed">Ошибка при получении ответа</string>
+
+    <!-- Analytics screen -->
+    <string name="analytics_btn">Аналитика запросов</string>
+    <string name="analytics_title">Аналитика запросов</string>
+    <string name="analytics_search_hint">Поиск по заявлениям…</string>
+    <string name="analytics_back_to_history">Вернуться в историю запросов</string>
+    <string name="analytics_empty">Заявлений ещё нет</string>
+    <string name="analytics_delete_message">Удалить это заявление из аналитики?</string>
+    <string name="analytics_label_fio">ФИО: </string>
+    <string name="analytics_label_problem">Проблема: </string>
+    <string name="analytics_label_phone">  •  Тел: </string>
+    <string name="analytics_label_address">Адрес: </string>
+    <string name="analytics_dialog_you">👤 Вы:\n</string>
+    <string name="analytics_dialog_ai">🤖 ИИ:\n</string>
+    <string name="analytics_no_messages">Переписка не сохранена</string>
+
+    <!-- Push-уведомления -->
+    <string name="notification_status_title">Статус заявки изменён</string>
+    <string name="notification_status_body">Нажмите, чтобы открыть заявку</string>
+    <string name="notification_channel_name">Статусы заявок</string>
+    <string name="notification_channel_desc">Уведомления об изменении статуса ваших заявок</string>
+
+    <!-- Статусы заявок -->
+    <string name="status_processing">в обработке</string>
+    <string name="status_in_work">в работе</string>
+    <string name="status_done">выполнено</string>
+    <string name="status_rejected">отклонено</string>
+</resources>

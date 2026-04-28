@@ -1,0 +1,63 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Карточки без серой обводки Material3 по умолчанию -->
+    <style name="App.CardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="strokeColor">@android:color/transparent</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="Base.Theme.VirtualDeputy" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorError">@color/colorError</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:statusBarColor">@color/colorSurface</item>
+        <item name="android:navigationBarColor">@color/colorBackground</item>
+        <!-- Фон диалогов Material3 — белый в светлой теме -->
+        <item name="colorSurfaceContainerHigh">@color/colorSurface</item>
+        <!-- Цвет выделения текста и ручек выделения -->
+        <item name="android:textColorHighlight">@color/colorTextHighlight</item>
+        <item name="android:textSelectHandle">@drawable/text_select_handle</item>
+        <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left</item>
+        <item name="android:textSelectHandleRight">@drawable/text_select_handle_right</item>
+        <!-- Убираем серую обводку Material3 у всех карточек -->
+        <item name="materialCardViewStyle">@style/App.CardView</item>
+    </style>
+
+    <style name="Theme.VirtualDeputy" parent="Base.Theme.VirtualDeputy" />
+
+    <!-- Тема для LiveChatActivity: всегда светлая + белый windowBackground.
+         Наследуем от Light (не DayNight), чтобы окно создавалось с белым фоном
+         ещё до того, как запустятся анимации перехода — нет чёрного артефакта. -->
+    <style name="Theme.VirtualDeputy.LiveChat" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorError">@color/colorError</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:textColorHighlight">@color/colorTextHighlight</item>
+        <item name="android:textSelectHandle">@drawable/text_select_handle</item>
+        <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left</item>
+        <item name="android:textSelectHandleRight">@drawable/text_select_handle_right</item>
+    </style>
+
+    <!-- Стиль заголовка тулбара -->
+    <style name="ToolbarTitleStyle" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <!-- Стиль подзаголовка тулбара -->
+    <style name="ToolbarSubtitleStyle" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <!-- Круглая форма для иконки битрикс -->
+    <style name="CircleShapeOverlay" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>
